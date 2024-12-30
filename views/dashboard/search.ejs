@@ -1,0 +1,14 @@
+<div class="container-fluid container-fluid-custom pd-5 mb-5">
+    <div class="row ">
+        <% if (searchResult != "") { %>
+            <% searchResult.forEach(function name(note, index) { %>
+                <a href="/dashboard/item/<%= note._id %>">
+                    <h4><%= note.title %></h4>
+                </a>
+            <% }) %>
+
+        <% } else { %>
+            <p>No results found</p>
+        <% } %>
+    </div>
+</div>
